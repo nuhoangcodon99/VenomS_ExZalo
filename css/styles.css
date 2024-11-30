@@ -26,7 +26,7 @@ body {
 h1 {
   color: #3a4f63;
   margin-bottom: 24px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
 }
@@ -40,30 +40,32 @@ label {
   margin-bottom: 6px;
   color: #5a6c7d;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-textarea, input[type="text"] {
+textarea,
+input[type="text"] {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #d1d9e6;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
   resize: vertical;
   background-color: #f8f9fa;
   color: #333;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-textarea:focus, input[type="text"]:focus {
+textarea:focus,
+input[type="text"]:focus {
   outline: none;
   border-color: #3498db;
-  box-shadow: 0 0 0 3px rgb(240, 199, 247);
+  box-shadow: 0 0 0 3px rgba(240, 199, 247, 0.7);
 }
 
 .button-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 12px;
   margin-top: 24px;
 }
@@ -72,12 +74,12 @@ textarea:focus, input[type="text"]:focus {
   padding: 12px;
   border: none;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #f49fe0;
-  color: #000000;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -97,6 +99,6 @@ textarea:focus, input[type="text"]:focus {
   display: block;
   text-align: center;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #7f8c8d;
 }
