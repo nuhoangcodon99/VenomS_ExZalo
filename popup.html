@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Extract Account Info</title>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <div class="container">
-    <h1>Extract Account Info</h1>
+    <header>
+      <h1>Extract Account Info</h1>
+    </header>
 
-    <div class="input-group">
-      <label for="cookies">Cookie:</label>
-      <textarea id="cookies" rows="3" readonly></textarea>
-    </div>
+    <main>
+      <section class="input-section">
+        <div class="input-group">
+          <label for="cookies">Cookie:</label>
+          <textarea id="cookies" rows="3" readonly aria-label="Cookie information"></textarea>
+        </div>
 
-    <div class="input-group">
-      <label for="imei">IMEI:</label>
-      <input type="text" id="imei" readonly>
-    </div>
+        <div class="input-group">
+          <label for="imei">IMEI:</label>
+          <input type="text" id="imei" readonly aria-label="IMEI">
+        </div>
 
-    <div class="input-group">
-      <label for="user-agent">User Agent:</label>
-      <input type="text" id="user-agent" readonly>
-    </div>
-    
-    <div class="button-container">
-      <button id="btn-copy-imei">Copy IMEI</button>
-      <button id="btn-copy-cookies">Copy Cookie</button>
-      <button id="btn-copy-ua">Copy User Agent</button>
-      <button id="refresh-button">Refresh Page</button>
-    </div>
+        <div class="input-group">
+          <label for="user-agent">User Agent:</label>
+          <input type="text" id="user-agent" readonly aria-label="User Agent">
+        </div>
+      </section>
+
+      <section class="button-section">
+        <div class="button-container">
+          <button id="btn-copy-imei" aria-label="Copy IMEI">Copy IMEI</button>
+          <button id="btn-copy-cookies" aria-label="Copy Cookie">Copy Cookie</button>
+          <button id="btn-copy-ua" aria-label="Copy User Agent">Copy User Agent</button>
+          <button id="refresh-button" aria-label="Refresh Page">Refresh Page</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="version"></span>
+    </footer>
   </div>
 
-  <span id="version"></span>
-
-  <script src="./js/custom.js"></script>
-  <script src="./js/popup.js"></script>
+  <!-- Scripts -->
+  <script src="./js/custom.js" defer></script>
+  <script src="./js/popup.js" defer></script>
 </body>
-</html>
+
+  </html>
